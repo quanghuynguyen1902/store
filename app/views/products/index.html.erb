@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="header">
+    <h1>📦 Products Catalog</h1>
+    <%= link_to "➕ Add New Product", new_product_path, class: "btn btn-primary" %>
+  </div>
+
+  <% if @products.any? %>
+    <div class="products-grid">
+      <% @products.each do |product| %>
+        <div class="product-card">
+          <h3><%= product.name %></h3>
+          <div class="card-actions">
+            <%= link_to "👁 View", product, class: "btn btn-sm" %>
+            <%= link_to "✏️ Edit", edit_product_path(product), class: "btn btn-sm" %>
+            <%= link_to "🗑 Delete", product, data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" }, class: "btn btn-sm btn-danger" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="empty-state">
+      <p>📭 No products found.</p>
+      <p>Start by adding your first product!</p>
+    </div>
+  <% end %>
+</div>

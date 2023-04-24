@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="form-container">
+    <h1>✏️ Edit Product</h1>
+
+    <%= form_with(model: @product, local: true) do |form| %>
+      <% if @product.errors.any? %>
+        <div class="error-box">
+          <h3>⚠️ <%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h3>
+          <ul>
+            <% @product.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= form.label :name, "Product Name" %>
+        <%= form.text_field :name, class: "form-control", placeholder: "Enter product name" %>
+      </div>
+
+      <div class="form-actions">
+        <%= form.submit "Update Product", class: "btn btn-primary" %>
+        <%= link_to "Cancel", @product, class: "btn btn-secondary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
