@@ -343,3 +343,95 @@ main {
   border: 1px solid #cfc;
   color: #3c3;
 }
+
+/* Rich Text Content Styles */
+.product-section {
+  margin-bottom: 30px;
+}
+
+.product-section h3 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+.rich-text-content {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+  line-height: 1.6;
+}
+
+.rich-text-content h1,
+.rich-text-content h2,
+.rich-text-content h3,
+.rich-text-content h4,
+.rich-text-content h5,
+.rich-text-content h6 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.rich-text-content p {
+  margin-bottom: 16px;
+}
+
+.rich-text-content ul,
+.rich-text-content ol {
+  margin-bottom: 16px;
+  padding-left: 30px;
+}
+
+.rich-text-content blockquote {
+  margin: 16px 0;
+  padding: 10px 20px;
+  background: #ecf0f1;
+  border-left: 4px solid #bdc3c7;
+  font-style: italic;
+}
+
+.rich-text-content code {
+  background: #e8f4f8;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 0.9em;
+}
+
+.rich-text-content pre {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.rich-text-content a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.rich-text-content a:hover {
+  text-decoration: underline;
+}
+
+/* Action Text Editor Styles */
+.form-group .rich-text-area {
+  min-height: 200px;
+}
+
+trix-editor {
+  border: 1px solid #ddd !important;
+  border-radius: 4px !important;
+  padding: 10px !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+
+trix-editor:focus {
+  outline: none !important;
+  border-color: #3498db !important;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2) !important;
+}

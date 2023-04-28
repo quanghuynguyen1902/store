@@ -4,6 +4,26 @@
       <h1>📦 <%= @product.name %></h1>
     </div>
     
+    <div class="detail-content">
+      <% if @product.description.present? %>
+        <div class="product-section">
+          <h3>📝 Description</h3>
+          <div class="rich-text-content">
+            <%= @product.description %>
+          </div>
+        </div>
+      <% end %>
+      
+      <% if @product.specifications.present? %>
+        <div class="product-section">
+          <h3>🔧 Specifications</h3>
+          <div class="rich-text-content">
+            <%= @product.specifications %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    
     <div class="detail-actions">
       <%= link_to "✏️ Edit Product", edit_product_path(@product), class: "btn btn-primary" %>
       <%= link_to "← Back to Products", products_path, class: "btn" %>
