@@ -1,8 +1,8 @@
 # Ruby Store Application
 
-A modern Ruby on Rails e-commerce store application built with Rails 8.0.2, featuring product management and user authentication.
+A modern Ruby on Rails e-commerce store application built with Rails, featuring product management and user authentication.
 
-## Features
+## Feature
 
 - **Product Management**: Browse, create, edit, and delete products
 - **User Authentication**: Secure user registration and login system
@@ -10,25 +10,6 @@ A modern Ruby on Rails e-commerce store application built with Rails 8.0.2, feat
 - **Password Reset**: Email-based password recovery
 - **Responsive Design**: Mobile-friendly interface
 - **Real-time Updates**: Powered by Hotwire (Turbo + Stimulus)
-
-## Tech Stack
-
-- **Ruby**: 3.4.4
-- **Rails**: 8.0.2
-- **Database**: SQLite3
-- **Frontend**: Hotwire, Import Maps, Propshaft
-- **Authentication**: Built-in with bcrypt
-- **Background Jobs**: Solid Queue
-- **Caching**: Solid Cache
-- **WebSockets**: Solid Cable
-- **Deployment**: Docker + Kamal
-
-## Requirements
-
-- Ruby 3.4.4
-- Rails 8.0.2
-- SQLite3
-- Node.js (for JavaScript runtime)
 
 ## Installation
 

@@ -1,0 +1,111 @@
+fr:
+  app:
+    name: "Magasin"
+    tagline: "Votre Magasin Numérique"
+  
+  navigation:
+    products: "Produits"
+    login: "Connexion"
+    logout: "Déconnexion"
+    register: "S'inscrire"
+    profile: "Profil"
+    language: "Langue"
+  
+  products:
+    title: "Catalogue de Produits"
+    new_product: "Ajouter un Nouveau Produit"
+    edit_product: "Modifier le Produit"
+    view_product: "Voir"
+    edit: "Modifier"
+    delete: "Supprimer"
+    delete_confirm: "Êtes-vous sûr ?"
+    no_products: "Aucun produit trouvé."
+    first_product: "Commencez par ajouter votre premier produit !"
+    created: "Le produit a été créé avec succès."
+    updated: "Le produit a été mis à jour avec succès."
+    deleted: "Le produit a été supprimé avec succès."
+    
+    form:
+      name: "Nom du Produit"
+      name_placeholder: "Entrez le nom du produit"
+      description: "Description du Produit"
+      specifications: "Spécifications du Produit"
+      main_image: "Image Principale"
+      main_image_help: "Télécharger l'image principale du produit (JPEG, PNG, GIF, WebP - max 5MB)"
+      gallery_images: "Galerie d'Images"
+      gallery_help: "Télécharger plusieurs images pour la galerie du produit (JPEG, PNG, GIF, WebP - max 5MB chacune)"
+      current_image: "Image actuelle :"
+      current_gallery: "Images de galerie actuelles :"
+      remove_image: "Supprimer l'image actuelle"
+      remove: "Supprimer"
+      create: "Créer le Produit"
+      update: "Mettre à Jour le Produit"
+      cancel: "Annuler"
+      upload_new: "Télécharger une nouvelle image principale (JPEG, PNG, GIF, WebP - max 5MB)"
+      upload_additional: "Télécharger des images supplémentaires pour la galerie (JPEG, PNG, GIF, WebP - max 5MB chacune)"
+    
+    show:
+      image_title: "Image du Produit"
+      gallery_title: "Galerie"
+      description_title: "Description"
+      specifications_title: "Spécifications"
+      back: "← Retour aux Produits"
+      no_image: "Aucune image"
+  
+  authentication:
+    login_title: "Bon Retour"
+    login_subtitle: "Connectez-vous à votre compte"
+    register_title: "Créer un Compte"
+    register_subtitle: "Rejoignez notre magasin aujourd'hui"
+    email: "Email"
+    password: "Mot de Passe"
+    login_button: "Se Connecter"
+    register_button: "Créer un Compte"
+    forgot_password: "Mot de passe oublié ?"
+    need_account: "Besoin d'un compte ? Inscrivez-vous"
+    have_account: "Vous avez déjà un compte ? Connectez-vous"
+    logged_in: "Vous êtes connecté."
+    logged_out: "Vous avez été déconnecté."
+    invalid_credentials: "Email ou mot de passe invalide."
+  
+  passwords:
+    reset_title: "Réinitialiser le Mot de Passe"
+    reset_subtitle: "Entrez votre email pour recevoir les instructions"
+    new_password_title: "Nouveau Mot de Passe"
+    new_password_subtitle: "Entrez votre nouveau mot de passe"
+    send_reset: "Envoyer les Instructions"
+    update_password: "Mettre à Jour le Mot de Passe"
+    reset_sent: "Les instructions de réinitialisation ont été envoyées à votre email."
+    password_updated: "Votre mot de passe a été mis à jour."
+    invalid_token: "Jeton de réinitialisation invalide ou expiré."
+  
+  languages:
+    en: "English"
+    vi: "Tiếng Việt"
+    fr: "Français" 
+    es: "Español"
+    ja: "日本語"
+  
+  actions:
+    save: "Enregistrer"
+    cancel: "Annuler"
+    submit: "Soumettre"
+    edit: "Modifier"
+    delete: "Supprimer"
+    view: "Voir"
+    back: "Retour"
+    new: "Nouveau"
+    create: "Créer"
+    update: "Mettre à Jour"
+  
+  messages:
+    success: "Succès !"
+    error: "Erreur !"
+    warning: "Attention !"
+    info: "Info"
+  
+  errors:
+    required: "est requis"
+    invalid_format: "a un format invalide"
+    too_large: "est trop volumineux"
+    not_found: "non trouvé"

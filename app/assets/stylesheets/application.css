@@ -64,6 +64,38 @@ body {
   font-size: 14px;
 }
 
+/* Language Switcher Styles */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.language-switcher label {
+  color: #ecf0f1;
+  font-size: 16px;
+}
+
+.language-select {
+  background: #34495e;
+  color: #ecf0f1;
+  border: 1px solid #5a6c7d;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.language-select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.language-select option {
+  background: #34495e;
+  color: #ecf0f1;
+}
+
 main {
   min-height: calc(100vh - 60px);
 }

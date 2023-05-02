@@ -1,0 +1,111 @@
+ja:
+  app:
+    name: "ストア"
+    tagline: "あなたのデジタルストア"
+  
+  navigation:
+    products: "商品"
+    login: "ログイン"
+    logout: "ログアウト"
+    register: "登録"
+    profile: "プロフィール"
+    language: "言語"
+  
+  products:
+    title: "商品カタログ"
+    new_product: "新しい商品を追加"
+    edit_product: "商品を編集"
+    view_product: "表示"
+    edit: "編集"
+    delete: "削除"
+    delete_confirm: "本当によろしいですか？"
+    no_products: "商品が見つかりません。"
+    first_product: "最初の商品を追加しましょう！"
+    created: "商品が正常に作成されました。"
+    updated: "商品が正常に更新されました。"
+    deleted: "商品が正常に削除されました。"
+    
+    form:
+      name: "商品名"
+      name_placeholder: "商品名を入力してください"
+      description: "商品説明"
+      specifications: "商品仕様"
+      main_image: "メイン画像"
+      main_image_help: "商品のメイン画像をアップロード（JPEG、PNG、GIF、WebP - 最大5MB）"
+      gallery_images: "ギャラリー画像"
+      gallery_help: "商品ギャラリー用の複数画像をアップロード（JPEG、PNG、GIF、WebP - 各最大5MB）"
+      current_image: "現在の画像："
+      current_gallery: "現在のギャラリー画像："
+      remove_image: "現在の画像を削除"
+      remove: "削除"
+      create: "商品を作成"
+      update: "商品を更新"
+      cancel: "キャンセル"
+      upload_new: "新しいメイン画像をアップロード（JPEG、PNG、GIF、WebP - 最大5MB）"
+      upload_additional: "ギャラリー用の追加画像をアップロード（JPEG、PNG、GIF、WebP - 各最大5MB）"
+    
+    show:
+      image_title: "商品画像"
+      gallery_title: "ギャラリー"
+      description_title: "説明"
+      specifications_title: "仕様"
+      back: "← 商品一覧に戻る"
+      no_image: "画像なし"
+  
+  authentication:
+    login_title: "おかえりなさい"
+    login_subtitle: "アカウントにサインイン"
+    register_title: "アカウント作成"
+    register_subtitle: "今すぐストアに参加"
+    email: "メール"
+    password: "パスワード"
+    login_button: "サインイン"
+    register_button: "アカウント作成"
+    forgot_password: "パスワードをお忘れですか？"
+    need_account: "アカウントが必要ですか？サインアップ"
+    have_account: "既にアカウントをお持ちですか？サインイン"
+    logged_in: "ログインしています。"
+    logged_out: "ログアウトしました。"
+    invalid_credentials: "メールまたはパスワードが無効です。"
+  
+  passwords:
+    reset_title: "パスワードリセット"
+    reset_subtitle: "リセット手順を受け取るためにメールを入力"
+    new_password_title: "新しいパスワード"
+    new_password_subtitle: "新しいパスワードを入力"
+    send_reset: "リセット手順を送信"
+    update_password: "パスワードを更新"
+    reset_sent: "パスワードリセット手順がメールに送信されました。"
+    password_updated: "パスワードが更新されました。"
+    invalid_token: "無効または期限切れのリセットトークンです。"
+  
+  languages:
+    en: "English"
+    vi: "Tiếng Việt"
+    fr: "Français" 
+    es: "Español"
+    ja: "日本語"
+  
+  actions:
+    save: "保存"
+    cancel: "キャンセル"
+    submit: "送信"
+    edit: "編集"
+    delete: "削除"
+    view: "表示"
+    back: "戻る"
+    new: "新規"
+    create: "作成"
+    update: "更新"
+  
+  messages:
+    success: "成功！"
+    error: "エラー！"
+    warning: "警告！"
+    info: "情報"
+  
+  errors:
+    required: "は必須です"
+    invalid_format: "の形式が無効です"
+    too_large: "が大きすぎます"
+    not_found: "が見つかりません"

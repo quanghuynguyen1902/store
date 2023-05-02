@@ -1,7 +1,7 @@
 <div class="container">
   <div class="header">
-    <h1>📦 Products Catalog</h1>
-    <%= link_to "➕ Add New Product", new_product_path, class: "btn btn-primary" %>
+    <h1>📦 <%= t('products.title') %></h1>
+    <%= link_to "➕ #{t('products.new_product')}", new_product_path, class: "btn btn-primary" %>
   </div>
 
   <% if @products.any? %>
@@ -15,7 +15,7 @@
           <% else %>
             <div class="card-image-placeholder">
               <span>📦</span>
-              <p>No image</p>
+              <p><%= t('products.show.no_image') %></p>
             </div>
           <% end %>
           <div class="card-content">
@@ -25,17 +25,17 @@
             <% end %>
           </div>
           <div class="card-actions">
-            <%= link_to "👁 View", product, class: "btn btn-sm" %>
-            <%= link_to "✏️ Edit", edit_product_path(product), class: "btn btn-sm" %>
-            <%= link_to "🗑 Delete", product, data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" }, class: "btn btn-sm btn-danger" %>
+            <%= link_to "👁 #{t('products.view_product')}", product, class: "btn btn-sm" %>
+            <%= link_to "✏️ #{t('products.edit')}", edit_product_path(product), class: "btn btn-sm" %>
+            <%= link_to "🗑 #{t('products.delete')}", product, data: { "turbo-method": :delete, "turbo-confirm": t('products.delete_confirm') }, class: "btn btn-sm btn-danger" %>
           </div>
         </div>
       <% end %>
     </div>
   <% else %>
     <div class="empty-state">
-      <p>📭 No products found.</p>
-      <p>Start by adding your first product!</p>
+      <p>📭 <%= t('products.no_products') %></p>
+      <p><%= t('products.first_product') %></p>
     </div>
   <% end %>
 </div>

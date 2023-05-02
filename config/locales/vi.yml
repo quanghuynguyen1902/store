@@ -1,0 +1,111 @@
+vi:
+  app:
+    name: "Cửa Hàng"
+    tagline: "Cửa Hàng Số Của Bạn"
+  
+  navigation:
+    products: "Sản Phẩm"
+    login: "Đăng Nhập"
+    logout: "Đăng Xuất"
+    register: "Đăng Ký"
+    profile: "Hồ Sơ"
+    language: "Ngôn Ngữ"
+  
+  products:
+    title: "Danh Mục Sản Phẩm"
+    new_product: "Thêm Sản Phẩm Mới"
+    edit_product: "Chỉnh Sửa Sản Phẩm"
+    view_product: "Xem"
+    edit: "Chỉnh Sửa"
+    delete: "Xóa"
+    delete_confirm: "Bạn có chắc chắn?"
+    no_products: "Không tìm thấy sản phẩm nào."
+    first_product: "Bắt đầu bằng việc thêm sản phẩm đầu tiên!"
+    created: "Sản phẩm đã được tạo thành công."
+    updated: "Sản phẩm đã được cập nhật thành công."
+    deleted: "Sản phẩm đã được xóa thành công."
+    
+    form:
+      name: "Tên Sản Phẩm"
+      name_placeholder: "Nhập tên sản phẩm"
+      description: "Mô Tả Sản Phẩm"
+      specifications: "Thông Số Kỹ Thuật"
+      main_image: "Hình Ảnh Chính"
+      main_image_help: "Tải lên hình ảnh chính của sản phẩm (JPEG, PNG, GIF, WebP - tối đa 5MB)"
+      gallery_images: "Thư Viện Hình Ảnh"
+      gallery_help: "Tải lên nhiều hình ảnh cho thư viện sản phẩm (JPEG, PNG, GIF, WebP - tối đa 5MB mỗi ảnh)"
+      current_image: "Hình ảnh hiện tại:"
+      current_gallery: "Thư viện hình ảnh hiện tại:"
+      remove_image: "Xóa hình ảnh hiện tại"
+      remove: "Xóa"
+      create: "Tạo Sản Phẩm"
+      update: "Cập Nhật Sản Phẩm"
+      cancel: "Hủy"
+      upload_new: "Tải lên hình ảnh chính mới (JPEG, PNG, GIF, WebP - tối đa 5MB)"
+      upload_additional: "Tải lên thêm hình ảnh cho thư viện (JPEG, PNG, GIF, WebP - tối đa 5MB mỗi ảnh)"
+    
+    show:
+      image_title: "Hình Ảnh Sản Phẩm"
+      gallery_title: "Thư Viện"
+      description_title: "Mô Tả"
+      specifications_title: "Thông Số Kỹ Thuật"
+      back: "← Quay Lại Danh Sách"
+      no_image: "Không có hình ảnh"
+  
+  authentication:
+    login_title: "Chào Mừng Trở Lại"
+    login_subtitle: "Đăng nhập vào tài khoản của bạn"
+    register_title: "Tạo Tài Khoản"
+    register_subtitle: "Tham gia cửa hàng của chúng tôi ngay hôm nay"
+    email: "Email"
+    password: "Mật Khẩu"
+    login_button: "Đăng Nhập"
+    register_button: "Tạo Tài Khoản"
+    forgot_password: "Quên mật khẩu?"
+    need_account: "Cần tài khoản? Đăng ký"
+    have_account: "Đã có tài khoản? Đăng nhập"
+    logged_in: "Bạn đã đăng nhập."
+    logged_out: "Bạn đã đăng xuất."
+    invalid_credentials: "Email hoặc mật khẩu không hợp lệ."
+  
+  passwords:
+    reset_title: "Đặt Lại Mật Khẩu"
+    reset_subtitle: "Nhập email để nhận hướng dẫn đặt lại"
+    new_password_title: "Mật Khẩu Mới"
+    new_password_subtitle: "Nhập mật khẩu mới của bạn"
+    send_reset: "Gửi Hướng Dẫn Đặt Lại"
+    update_password: "Cập Nhật Mật Khẩu"
+    reset_sent: "Hướng dẫn đặt lại mật khẩu đã được gửi đến email của bạn."
+    password_updated: "Mật khẩu của bạn đã được cập nhật."
+    invalid_token: "Mã đặt lại không hợp lệ hoặc đã hết hạn."
+  
+  languages:
+    en: "English"
+    vi: "Tiếng Việt"
+    fr: "Français" 
+    es: "Español"
+    ja: "日本語"
+  
+  actions:
+    save: "Lưu"
+    cancel: "Hủy"
+    submit: "Gửi"
+    edit: "Chỉnh Sửa"
+    delete: "Xóa"
+    view: "Xem"
+    back: "Quay Lại"
+    new: "Mới"
+    create: "Tạo"
+    update: "Cập Nhật"
+  
+  messages:
+    success: "Thành Công!"
+    error: "Lỗi!"
+    warning: "Cảnh Báo!"
+    info: "Thông Tin"
+  
+  errors:
+    required: "là bắt buộc"
+    invalid_format: "có định dạng không hợp lệ"
+    too_large: "quá lớn"
+    not_found: "không tìm thấy"

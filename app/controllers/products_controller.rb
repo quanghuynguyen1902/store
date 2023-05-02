@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     
     if @product.save
-      redirect_to @product, notice: 'Product was successfully created.'
+      redirect_to @product, notice: t('products.created')
     else
       render :new
     end
@@ -34,7 +34,7 @@ class ProductsController < ApplicationController
     handle_image_removal
     
     if @product.update(product_params)
-      redirect_to @product, notice: 'Product was successfully updated.'
+      redirect_to @product, notice: t('products.updated')
     else
       render :edit
     end
@@ -43,7 +43,7 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to products_url, notice: 'Product was successfully deleted.'
+    redirect_to products_url, notice: t('products.deleted')
   end
 
   private

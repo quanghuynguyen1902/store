@@ -1,0 +1,111 @@
+es:
+  app:
+    name: "Tienda"
+    tagline: "Tu Tienda Digital"
+  
+  navigation:
+    products: "Productos"
+    login: "Iniciar Sesión"
+    logout: "Cerrar Sesión"
+    register: "Registrarse"
+    profile: "Perfil"
+    language: "Idioma"
+  
+  products:
+    title: "Catálogo de Productos"
+    new_product: "Agregar Nuevo Producto"
+    edit_product: "Editar Producto"
+    view_product: "Ver"
+    edit: "Editar"
+    delete: "Eliminar"
+    delete_confirm: "¿Estás seguro?"
+    no_products: "No se encontraron productos."
+    first_product: "¡Comienza agregando tu primer producto!"
+    created: "El producto se creó exitosamente."
+    updated: "El producto se actualizó exitosamente."
+    deleted: "El producto se eliminó exitosamente."
+    
+    form:
+      name: "Nombre del Producto"
+      name_placeholder: "Ingresa el nombre del producto"
+      description: "Descripción del Producto"
+      specifications: "Especificaciones del Producto"
+      main_image: "Imagen Principal"
+      main_image_help: "Subir imagen principal del producto (JPEG, PNG, GIF, WebP - máx 5MB)"
+      gallery_images: "Galería de Imágenes"
+      gallery_help: "Subir múltiples imágenes para la galería del producto (JPEG, PNG, GIF, WebP - máx 5MB cada una)"
+      current_image: "Imagen actual:"
+      current_gallery: "Imágenes de galería actuales:"
+      remove_image: "Eliminar imagen actual"
+      remove: "Eliminar"
+      create: "Crear Producto"
+      update: "Actualizar Producto"
+      cancel: "Cancelar"
+      upload_new: "Subir nueva imagen principal (JPEG, PNG, GIF, WebP - máx 5MB)"
+      upload_additional: "Subir imágenes adicionales para la galería (JPEG, PNG, GIF, WebP - máx 5MB cada una)"
+    
+    show:
+      image_title: "Imagen del Producto"
+      gallery_title: "Galería"
+      description_title: "Descripción"
+      specifications_title: "Especificaciones"
+      back: "← Volver a Productos"
+      no_image: "Sin imagen"
+  
+  authentication:
+    login_title: "Bienvenido de Nuevo"
+    login_subtitle: "Inicia sesión en tu cuenta"
+    register_title: "Crear Cuenta"
+    register_subtitle: "Únete a nuestra tienda hoy"
+    email: "Email"
+    password: "Contraseña"
+    login_button: "Iniciar Sesión"
+    register_button: "Crear Cuenta"
+    forgot_password: "¿Olvidaste tu contraseña?"
+    need_account: "¿Necesitas una cuenta? Regístrate"
+    have_account: "¿Ya tienes una cuenta? Inicia sesión"
+    logged_in: "Has iniciado sesión."
+    logged_out: "Has cerrado sesión."
+    invalid_credentials: "Email o contraseña inválidos."
+  
+  passwords:
+    reset_title: "Restablecer Contraseña"
+    reset_subtitle: "Ingresa tu email para recibir instrucciones"
+    new_password_title: "Nueva Contraseña"
+    new_password_subtitle: "Ingresa tu nueva contraseña"
+    send_reset: "Enviar Instrucciones"
+    update_password: "Actualizar Contraseña"
+    reset_sent: "Las instrucciones de restablecimiento han sido enviadas a tu email."
+    password_updated: "Tu contraseña ha sido actualizada."
+    invalid_token: "Token de restablecimiento inválido o expirado."
+  
+  languages:
+    en: "English"
+    vi: "Tiếng Việt"
+    fr: "Français" 
+    es: "Español"
+    ja: "日本語"
+  
+  actions:
+    save: "Guardar"
+    cancel: "Cancelar"
+    submit: "Enviar"
+    edit: "Editar"
+    delete: "Eliminar"
+    view: "Ver"
+    back: "Volver"
+    new: "Nuevo"
+    create: "Crear"
+    update: "Actualizar"
+  
+  messages:
+    success: "¡Éxito!"
+    error: "¡Error!"
+    warning: "¡Advertencia!"
+    info: "Info"
+  
+  errors:
+    required: "es requerido"
+    invalid_format: "tiene formato inválido"
+    too_large: "es demasiado grande"
+    not_found: "no encontrado"

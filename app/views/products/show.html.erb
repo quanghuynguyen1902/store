@@ -7,7 +7,7 @@
     <div class="detail-content">
       <% if @product.main_image.attached? %>
         <div class="product-section">
-          <h3>📸 Product Image</h3>
+          <h3>📸 <%= t('products.show.image_title') %></h3>
           <div class="main-image-container">
             <%= image_tag @product.main_image, class: "main-product-image", alt: @product.name %>
           </div>
@@ -16,7 +16,7 @@
       
       <% if @product.gallery_images.attached? %>
         <div class="product-section">
-          <h3>🖼️ Gallery</h3>
+          <h3>🖼️ <%= t('products.show.gallery_title') %></h3>
           <div class="image-gallery">
             <% @product.gallery_images.each do |image| %>
               <div class="gallery-image-item">
@@ -29,7 +29,7 @@
       
       <% if @product.description.present? %>
         <div class="product-section">
-          <h3>📝 Description</h3>
+          <h3>📝 <%= t('products.show.description_title') %></h3>
           <div class="rich-text-content">
             <%= @product.description %>
           </div>
@@ -38,7 +38,7 @@
       
       <% if @product.specifications.present? %>
         <div class="product-section">
-          <h3>🔧 Specifications</h3>
+          <h3>🔧 <%= t('products.show.specifications_title') %></h3>
           <div class="rich-text-content">
             <%= @product.specifications %>
           </div>
@@ -47,8 +47,8 @@
     </div>
     
     <div class="detail-actions">
-      <%= link_to "✏️ Edit Product", edit_product_path(@product), class: "btn btn-primary" %>
-      <%= link_to "← Back to Products", products_path, class: "btn" %>
+      <%= link_to "✏️ #{t('products.edit_product')}", edit_product_path(@product), class: "btn btn-primary" %>
+      <%= link_to t('products.show.back'), products_path, class: "btn" %>
     </div>
   </div>
 </div>

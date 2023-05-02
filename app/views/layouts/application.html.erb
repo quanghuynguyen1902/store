@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Store" %></title>
+    <title><%= content_for(:title) || t('app.name') %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -26,14 +26,26 @@
     <nav class="navbar">
       <div class="navbar-container">
         <div class="navbar-brand">
-          <%= link_to "🏪 Store", root_path, class: "brand-link" %>
+          <%= link_to "🏪 #{t('app.name')}", root_path, class: "brand-link" %>
         </div>
         <div class="navbar-actions">
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <label for="language-select">🌐</label>
+            <select id="language-select" class="language-select" onchange="changeLanguage(this.value)">
+              <% I18n.available_locales.each do |locale| %>
+                <option value="<%= locale %>" <%= 'selected' if I18n.locale == locale %>>
+                  <%= t("languages.#{locale}") %>
+                </option>
+              <% end %>
+            </select>
+          </div>
+          
           <% if defined?(current_user) && current_user %>
             <span class="user-email"><%= current_user.email if current_user.respond_to?(:email) %></span>
-            <%= link_to "Logout", session_path, data: { "turbo-method": :delete }, class: "btn btn-sm" %>
+            <%= link_to t('navigation.logout'), session_path, data: { "turbo-method": :delete }, class: "btn btn-sm" %>
           <% else %>
-            <%= link_to "Login", new_session_path, class: "btn btn-sm btn-primary" %>
+            <%= link_to t('navigation.login'), new_session_path, class: "btn btn-sm btn-primary" %>
           <% end %>
         </div>
       </div>
@@ -41,5 +53,18 @@
     <main>
       <%= yield %>
     </main>
+    
+    <script>
+      function changeLanguage(locale) {
+        const currentPath = window.location.pathname;
+        const currentSearch = window.location.search;
+        
+        // Remove existing locale from path
+        const pathWithoutLocale = currentPath.replace(/^\/(en|vi|fr|es|ja)/, '');
+        const newPath = `/${locale}${pathWithoutLocale}`;
+        
+        window.location.href = newPath + currentSearch;
+      }
+    </script>
   </body>
 </html>

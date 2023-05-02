@@ -18,11 +18,11 @@ class Product < ApplicationRecord
       return unless main_image.attached?
       
       unless main_image.content_type.in?(%w[image/jpeg image/jpg image/png image/gif image/webp])
-        errors.add(:main_image, 'must be a valid image format (JPEG, PNG, GIF, WebP)')
+        errors.add(:main_image, I18n.t('errors.invalid_format'))
       end
       
       if main_image.byte_size > 5.megabytes
-        errors.add(:main_image, 'should be less than 5MB')
+        errors.add(:main_image, I18n.t('errors.too_large'))
       end
     end
     
@@ -31,11 +31,11 @@ class Product < ApplicationRecord
       
       gallery_images.each do |image|
         unless image.content_type.in?(%w[image/jpeg image/jpg image/png image/gif image/webp])
-          errors.add(:gallery_images, 'must be valid image formats (JPEG, PNG, GIF, WebP)')
+          errors.add(:gallery_images, I18n.t('errors.invalid_format'))
         end
         
         if image.byte_size > 5.megabytes
-          errors.add(:gallery_images, 'should be less than 5MB each')
+          errors.add(:gallery_images, I18n.t('errors.too_large'))
         end
       end
     end

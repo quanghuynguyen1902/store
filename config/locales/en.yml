@@ -28,4 +28,113 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  app:
+    name: "Store"
+    tagline: "Your Digital Store"
+  
+  navigation:
+    products: "Products"
+    login: "Login"
+    logout: "Logout"
+    register: "Register"
+    profile: "Profile"
+    language: "Language"
+  
+  products:
+    title: "Products Catalog"
+    new_product: "Add New Product"
+    edit_product: "Edit Product"
+    view_product: "View"
+    edit: "Edit"
+    delete: "Delete"
+    delete_confirm: "Are you sure?"
+    no_products: "No products found."
+    first_product: "Start by adding your first product!"
+    created: "Product was successfully created."
+    updated: "Product was successfully updated."
+    deleted: "Product was successfully deleted."
+    
+    form:
+      name: "Product Name"
+      name_placeholder: "Enter product name"
+      description: "Product Description"
+      specifications: "Product Specifications"
+      main_image: "Main Product Image"
+      main_image_help: "Upload a main product image (JPEG, PNG, GIF, WebP - max 5MB)"
+      gallery_images: "Gallery Images"
+      gallery_help: "Upload multiple images for product gallery (JPEG, PNG, GIF, WebP - max 5MB each)"
+      current_image: "Current image:"
+      current_gallery: "Current gallery images:"
+      remove_image: "Remove current image"
+      remove: "Remove"
+      create: "Create Product"
+      update: "Update Product"
+      cancel: "Cancel"
+      upload_new: "Upload a new main product image (JPEG, PNG, GIF, WebP - max 5MB)"
+      upload_additional: "Upload additional images for product gallery (JPEG, PNG, GIF, WebP - max 5MB each)"
+    
+    show:
+      image_title: "Product Image"
+      gallery_title: "Gallery"
+      description_title: "Description"
+      specifications_title: "Specifications"
+      back: "← Back to Products"
+      no_image: "No image"
+  
+  authentication:
+    login_title: "Welcome Back"
+    login_subtitle: "Sign in to your account"
+    register_title: "Create Account"
+    register_subtitle: "Join our store today"
+    email: "Email"
+    password: "Password"
+    login_button: "Sign In"
+    register_button: "Create Account"
+    forgot_password: "Forgot your password?"
+    need_account: "Need an account? Sign up"
+    have_account: "Already have an account? Sign in"
+    logged_in: "You are logged in."
+    logged_out: "You have been logged out."
+    invalid_credentials: "Invalid email or password."
+  
+  passwords:
+    reset_title: "Reset Password"
+    reset_subtitle: "Enter your email to receive reset instructions"
+    new_password_title: "New Password"
+    new_password_subtitle: "Enter your new password"
+    send_reset: "Send Reset Instructions"
+    update_password: "Update Password"
+    reset_sent: "Password reset instructions have been sent to your email."
+    password_updated: "Your password has been updated."
+    invalid_token: "Invalid or expired reset token."
+  
+  languages:
+    en: "English"
+    vi: "Tiếng Việt"
+    fr: "Français" 
+    es: "Español"
+    ja: "日本語"
+  
+  actions:
+    save: "Save"
+    cancel: "Cancel"
+    submit: "Submit"
+    edit: "Edit"
+    delete: "Delete"
+    view: "View"
+    back: "Back"
+    new: "New"
+    create: "Create"
+    update: "Update"
+  
+  messages:
+    success: "Success!"
+    error: "Error!"
+    warning: "Warning!"
+    info: "Info"
+  
+  errors:
+    required: "is required"
+    invalid_format: "has invalid format"
+    too_large: "is too large"
+    not_found: "not found"
