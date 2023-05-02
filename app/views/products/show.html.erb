@@ -5,6 +5,28 @@
     </div>
     
     <div class="detail-content">
+      <% if @product.main_image.attached? %>
+        <div class="product-section">
+          <h3>📸 Product Image</h3>
+          <div class="main-image-container">
+            <%= image_tag @product.main_image, class: "main-product-image", alt: @product.name %>
+          </div>
+        </div>
+      <% end %>
+      
+      <% if @product.gallery_images.attached? %>
+        <div class="product-section">
+          <h3>🖼️ Gallery</h3>
+          <div class="image-gallery">
+            <% @product.gallery_images.each do |image| %>
+              <div class="gallery-image-item">
+                <%= image_tag image, class: "gallery-image", alt: @product.name %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+      
       <% if @product.description.present? %>
         <div class="product-section">
           <h3>📝 Description</h3>

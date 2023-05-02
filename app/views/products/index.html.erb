@@ -8,7 +8,22 @@
     <div class="products-grid">
       <% @products.each do |product| %>
         <div class="product-card">
-          <h3><%= product.name %></h3>
+          <% if product.main_image.attached? %>
+            <div class="card-image">
+              <%= image_tag product.main_image, class: "product-thumbnail", alt: product.name %>
+            </div>
+          <% else %>
+            <div class="card-image-placeholder">
+              <span>📦</span>
+              <p>No image</p>
+            </div>
+          <% end %>
+          <div class="card-content">
+            <h3><%= product.name %></h3>
+            <% if product.description.present? %>
+              <p class="card-description"><%= truncate(product.description.to_plain_text, length: 100) %></p>
+            <% end %>
+          </div>
           <div class="card-actions">
             <%= link_to "👁 View", product, class: "btn btn-sm" %>
             <%= link_to "✏️ Edit", edit_product_path(product), class: "btn btn-sm" %>

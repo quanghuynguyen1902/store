@@ -29,6 +29,18 @@
         <%= form.rich_text_area :specifications, class: "form-control" %>
       </div>
 
+      <div class="form-group">
+        <%= form.label :main_image, "📸 Main Product Image" %>
+        <%= form.file_field :main_image, class: "form-control file-input", accept: "image/*" %>
+        <small class="form-text">Upload a main product image (JPEG, PNG, GIF, WebP - max 5MB)</small>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :gallery_images, "🖼️ Gallery Images" %>
+        <%= form.file_field :gallery_images, class: "form-control file-input", accept: "image/*", multiple: true %>
+        <small class="form-text">Upload multiple images for product gallery (JPEG, PNG, GIF, WebP - max 5MB each)</small>
+      </div>
+
       <div class="form-actions">
         <%= form.submit "Create Product", class: "btn btn-primary" %>
         <%= link_to "Cancel", products_path, class: "btn btn-secondary" %>
