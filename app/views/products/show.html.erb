@@ -5,6 +5,28 @@
     </div>
     
     <div class="detail-content">
+      <div class="product-section">
+        <h3>📊 <%= t('stock.status') %></h3>
+        <div class="stock-status">
+          <% if @product.in_stock? %>
+            <span class="stock-available">✅ <%= t('stock.in_stock', count: @product.stock_quantity) %></span>
+          <% else %>
+            <span class="stock-unavailable">❌ <%= t('stock.out_of_stock') %></span>
+            
+            <div class="stock-notification-form">
+              <h4>📧 <%= t('stock_notifications.title') %></h4>
+              <p><%= t('stock_notifications.description') %></p>
+              <%= form_with url: product_stock_notifications_path(@product), method: :post, local: true do |form| %>
+                <div class="form-group">
+                  <%= form.email_field :email, placeholder: t('stock_notifications.email_placeholder'), required: true, class: "form-control" %>
+                  <%= form.submit t('stock_notifications.subscribe'), class: "btn btn-primary" %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      
       <% if @product.main_image.attached? %>
         <div class="product-section">
           <h3>📸 <%= t('products.show.image_title') %></h3>

@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     root "products#index"
     resource :session
     resources :passwords, param: :token
-    resources :products
+    resources :products do
+      resources :stock_notifications, only: [:create, :destroy]
+    end
   end
 end

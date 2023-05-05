@@ -20,6 +20,13 @@
           <% end %>
           <div class="card-content">
             <h3><%= product.name %></h3>
+            <div class="stock-indicator">
+              <% if product.in_stock? %>
+                <span class="stock-available">✅ <%= t('stock.in_stock', count: product.stock_quantity) %></span>
+              <% else %>
+                <span class="stock-unavailable">❌ <%= t('stock.out_of_stock') %></span>
+              <% end %>
+            </div>
             <% if product.description.present? %>
               <p class="card-description"><%= truncate(product.description.to_plain_text, length: 100) %></p>
             <% end %>

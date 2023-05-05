@@ -29,11 +29,16 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
+    old_stock = @product.stock_quantity
     
     # Handle image removal
     handle_image_removal
     
     if @product.update(product_params)
+      # Notify subscribers if stock increased from 0
+      if old_stock == 0 && @product.stock_quantity > 0
+        @product.notify_subscribers!
+      end
       redirect_to @product, notice: t('products.updated')
     else
       render :edit
@@ -49,7 +54,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :description, :specifications, :main_image, gallery_images: [])
+    params.require(:product).permit(:name, :description, :specifications, :stock_quantity, :main_image, gallery_images: [])
   end
   
   def handle_image_removal

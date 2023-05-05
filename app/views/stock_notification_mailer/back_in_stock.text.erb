@@ -1,0 +1,21 @@
+<%= t('stock_notification_mailer.back_in_stock.heading') %>
+
+<%= t('stock_notification_mailer.back_in_stock.greeting') %>
+
+<%= t('stock_notification_mailer.back_in_stock.product_info') %>:
+<%= @product.name %>
+
+<%= t('stock_notification_mailer.back_in_stock.availability', count: @product.stock_quantity) %>
+
+<% if @product.description.present? %>
+<%= truncate(@product.description.to_plain_text, length: 200) %>
+<% end %>
+
+<%= t('stock_notification_mailer.back_in_stock.call_to_action') %>
+
+<%= t('stock_notification_mailer.back_in_stock.view_product') %>: <%= product_url(@product) %>
+
+---
+<%= t('stock_notification_mailer.back_in_stock.footer') %>
+
+<%= t('stock_notification_mailer.back_in_stock.unsubscribe') %>: <%= product_stock_notification_url(@product, @stock_notification) %>

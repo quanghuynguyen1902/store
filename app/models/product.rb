@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
     validates :name, presence: true
+    validates :stock_quantity, presence: true, numericality: { greater_than_or_equal_to: 0 }
     
     has_rich_text :description
     has_rich_text :specifications
@@ -8,9 +9,29 @@ class Product < ApplicationRecord
     has_one_attached :main_image
     has_many_attached :gallery_images
     
+    # Stock notifications
+    has_many :stock_notifications, dependent: :destroy
+    
     # Custom validation for file attachments
     validate :validate_main_image
     validate :validate_gallery_images
+    
+    def in_stock?
+      stock_quantity > 0
+    end
+    
+    def out_of_stock?
+      stock_quantity == 0
+    end
+    
+    def notify_subscribers!
+      return unless in_stock?
+      
+      stock_notifications.where(notified_at: nil).find_each do |notification|
+        StockNotificationMailer.back_in_stock(notification).deliver_now
+        notification.update!(notified_at: Time.current)
+      end
+    end
     
     private
     

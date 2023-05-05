@@ -59,6 +59,8 @@ en:
       name_placeholder: "Enter product name"
       description: "Product Description"
       specifications: "Product Specifications"
+      stock_quantity: "Stock Quantity"
+      stock_help: "Number of items available in stock"
       main_image: "Main Product Image"
       main_image_help: "Upload a main product image (JPEG, PNG, GIF, WebP - max 5MB)"
       gallery_images: "Gallery Images"
@@ -138,3 +140,33 @@ en:
     invalid_format: "has invalid format"
     too_large: "is too large"
     not_found: "not found"
+  
+  stock:
+    status: "Stock Status"
+    in_stock:
+      one: "%{count} item in stock"
+      other: "%{count} items in stock"
+    out_of_stock: "Out of Stock"
+  
+  stock_notifications:
+    title: "Get Notified When Back in Stock"
+    description: "Enter your email address and we'll notify you when this product becomes available again."
+    email_placeholder: "your.email@example.com"
+    subscribe: "Notify Me"
+    subscribed: "You'll be notified when this product is back in stock."
+    subscription_failed: "Unable to subscribe to notifications. Please check your email address."
+    unsubscribed: "You've been unsubscribed from stock notifications for this product."
+  
+  stock_notification_mailer:
+    back_in_stock:
+      subject: "🎉 %{product_name} is Back in Stock!"
+      heading: "Great News! Your Product is Available"
+      greeting: "Hello! We have exciting news for you."
+      product_info: "Product"
+      availability:
+        one: "We now have %{count} item available."
+        other: "We now have %{count} items available."
+      call_to_action: "Don't wait too long - our stock is limited and popular items sell out quickly!"
+      view_product: "View Product"
+      footer: "Thank you for shopping with us!"
+      unsubscribe: "Unsubscribe from notifications"
